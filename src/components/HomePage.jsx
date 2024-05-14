@@ -120,7 +120,7 @@ const HomePage = ( {recipes, loading, currentPage, setCurrentPage }) => {
           </div>    
           <div>
             <Pagination recipesPerPage={recipesPerPage} prevPage={prevPage}
-              totalRecipes={recipes.length} paginate={paginate} nextPage={nextPage}/></div>
+              totalRecipes={(cuisine || mealType || difficulty)? filteredRecipes.length : recipes.length} paginate={paginate} nextPage={nextPage}/></div>
           </div>        
         </div>
   )
